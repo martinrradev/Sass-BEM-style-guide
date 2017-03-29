@@ -15,10 +15,10 @@
 ## Introduction
 
 #### ***Sass***
-	Sass enables us to write CSS in small, easy-to-navigate modules, meaning we can start with base styles and bolt on any components we might need for the system we’re currently building.
+Sass enables us to write CSS in small, easy-to-navigate modules, meaning we can start with base styles and bolt on any components we might need for the system we’re currently building.
 
 #### ***BEM***
-	The BEM methodology gives us this clarity. BEM stands for Block-Element-Modifier and is designed to help modularise front-end development by breaking everything into blocks containing elements, then using modifiers to tweak them.
+The BEM methodology gives us this clarity. BEM stands for Block-Element-Modifier and is designed to help modularise front-end development by breaking everything into blocks containing elements, then using modifiers to tweak them.
 
 #### ***BEM syntax:***
 ```
@@ -26,7 +26,7 @@
 ```
  
 ## **Block**
-	A functionally independent page component that can be reused. In HTML, blocks are represented by the class attribute.
+A functionally independent page component that can be reused. In HTML, blocks are represented by the class attribute.
 
 Features:
 
@@ -67,7 +67,7 @@ Features:
 ```
 
 ## **Element**
-	A composite part of a block that can't be used separately from it.
+A composite part of a block that can't be used separately from it.
 
 Features:
 
@@ -217,7 +217,7 @@ An element is an optional block component. Not all blocks have elements.
 ### Demo 1
 ##### ***Example:***
 ```html
-<! -- 'HTML' -->
+<!-- 'HTML' -->
 <nav role="navigation" aria-label="primary">
   <ul class="nav__list">
     <li class="nav__list__item">
@@ -259,7 +259,7 @@ An element is an optional block component. Not all blocks have elements.
 ### Demo 2
 ##### ***Example:***
 ```html
-<! -- 'HTML' -->
+<!-- 'HTML' -->
 <div class="pending-delivery-header">
   <div class="pending-delivery-header__content">
     <div class="pending-delivery-header__info">
