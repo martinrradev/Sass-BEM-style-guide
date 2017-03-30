@@ -253,13 +253,13 @@ An element is an optional block component. Not all blocks have elements.
 <nav role="navigation" aria-label="primary">
   <ul class="nav__list">
     <li class="nav__list__item">
-      <a href="" class="nav__link--accepted"></a>
+      <a href="" class="nav__link_accepted"></a>
     </li>
     <li class="nav__list__item">
-      <a href="" class="nav__link--edited"></a>
+      <a href="" class="nav__link_edited"></a>
     </li>
-    <li class="nav__list__item">
-      <a href="" class="nav__link--rejected"></a>
+    <li class="nav__list__item_color_red">
+      <a href="" class="nav__link_rejected"></a>
     </li>
   </ul>
 </nav>
@@ -272,17 +272,20 @@ An element is an optional block component. Not all blocks have elements.
 	&__list {
 	
 	   &__item {
+
+			&_color_red {
+			}
 	   }    
 	 }
 	&__link {
 	
-	  &--accepted { 
+	  &_accepted { 
 	  },
 	 
-	  &--edited { 
+	  &_edited { 
 	  },
 	  
-	  &--rejected { 
+	  &_rejected { 
 	  }
 	}
 }
@@ -421,8 +424,9 @@ Types of modifiers:
  - The structure of the modifier's full name follows the pattern:
 
 	> block-name_modifier-name_modifier-value
-	> block-name__element-name_modifier-name_modifier-value Example
-
+	> block-name__element-name_modifier-name_modifier-value
+	
+##### ***Example:***
 ```html
 <!-- The 'search-form' block has the 'theme' modifier with the value 'islands' -->
 <form class="search-form search-form_theme_islands">
