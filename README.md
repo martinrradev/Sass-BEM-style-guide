@@ -22,7 +22,10 @@ The BEM methodology gives us this clarity. BEM stands for Block-Element-Modifier
 
 #### ***BEM syntax:***
 ```
-.BLOCK{__ELEMENT[--MODIFIER]}
+Syntax:
+.BLOCK { __ELEMENT [ _MODIFIER-NAME_MODIFIER-VALUE ]}
+Example:
+.BLOCK__ITEM_SIZE_M
 ```
  
 ## **Block**
@@ -65,6 +68,14 @@ Features:
     <form class="search-form"></form>
 </header>
 ```
+
+#### BEM’s strict naming rules (Block)
+##### ***Example:***
+	header
+	container
+	menu
+	checkbox
+	input
 
 ## **Element**
 A composite part of a block that can't be used separately from it.
@@ -145,6 +156,19 @@ However, this block structure is always represented as a flat list of elements i
 
 ##### ***Example:***
 ```css
+.block {
+
+	&__elem1 {
+	
+	},
+	&__elem2 {
+	
+	},
+	&__elem3 {
+	
+	}
+}
+
 .block {}
 .block__elem1 {}
 .block__elem2 {}
@@ -210,6 +234,14 @@ An element is an optional block component. Not all blocks have elements.
     <button class="button">Search</button>
 </div>
 ```
+
+#### BEM’s strict naming rules (Element)
+##### ***Example:***
+	menu__item
+	list__item
+	checkbox__caption
+	header__title
+	nav__item
 
 ## **Demo**
 ### HTML and BEM representation
@@ -438,6 +470,14 @@ From the BEM perspective, a modifier can't be used in isolation from the modifie
 </form>
 ```
 Why write the block name in the names of modifiers and elements?
+
+#### BEM’s strict naming rules (Modifier)
+##### ***Example:***
+	_disabled
+	_highlighted
+	_checked
+	_fixed
+	_size-big
 
 ## **Mix**
 A technique for using different BEM entities on a single DOM node.
