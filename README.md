@@ -391,29 +391,25 @@ In this example, we combined the behavior and styles of the search-form block an
 </nav>
 ```
 
-```css
+``` css
 /* CSS */
 .nav {
+  &__list {
+    &__item {
+      &_color_red {
+      }
+    }    
+  }
+  &__link {
+    &_accepted { 
+    },
 
-	&__list {
-	
-	   &__item {
+    &_edited { 
+    },
 
-			&_color_red {
-			}
-	   }    
-	 }
-	&__link {
-	
-	  &_accepted { 
-	  },
-	 
-	  &_edited { 
-	  },
-	  
-	  &_rejected { 
-	  }
-	}
+    &_rejected { 
+    }
+  }
 }
 ```
 
@@ -443,7 +439,7 @@ In this example, we combined the behavior and styles of the search-form block an
 </div>
 ```
 
-```css
+``` css
 /* CSS */
 .pending-delivery-header {
   @include flex(11);
