@@ -5,12 +5,12 @@
 ## Table of Contents
 
 1. [Introduction](#introduction)
-1. [Block](#block)
-1. [Element](#element)
-1. [Demo: HTML and BEM representation](#demo)
-1. [Should I create a block or an element?](#question)
-1. [Modifier](#modifier)
-1. [Mix](#mix)
+2. [Block](#block)
+3. [Element](#element)
+3. [Should I create a block or an element?](#question)
+4. [Modifier](#modifier)
+5. [Mix](#mix)
+6. [Demo: HTML and BEM representation](#demo)
 
 ## Introduction
 
@@ -28,6 +28,7 @@ Example:
 .BLOCK__ITEM_SIZE_M
 ```
  
+## Block
 ## ** Block **
 A functionally independent page component that can be reused. In HTML, blocks are represented by the class attribute.
 
@@ -75,6 +76,7 @@ Features:
 	checkbox
 	input
 
+## Element
 ## ** Element **
 A composite part of a block that can't be used separately from it.
 
@@ -236,6 +238,7 @@ An element is an optional block component. Not all blocks have elements.
 	header__title
 	nav__item
 
+## Should I create a block or an element?
 ## ** Should I create a block or an element? **
 
  1. If a section of code might be reused and it doesn't depend on other
@@ -245,6 +248,7 @@ An element is an optional block component. Not all blocks have elements.
 
 The exception is elements that must be divided into smaller parts – subelements – in order to simplify development. In the BEM methodology, *you can't create elements of elements*. In a case like this, instead of creating an element, you need to create a service block.
 
+## Modifier
 ## ** Modifier **
 An entity that defines the appearance, state, or behavior of a block or element.
 
@@ -346,6 +350,7 @@ Why write the block name in the names of modifiers and elements?
 	_fixed
 	_size_big
 
+## Mix
 ## ** Mix **
 A technique for using different BEM entities on a single DOM node.
 
@@ -369,6 +374,7 @@ Mixes allow you to:
 
 In this example, we combined the behavior and styles of the search-form block and the search-form element from the header block. This approach allows us to set the external geometry and positioning in the header__search-form element, while the search-form block itself remains universal. As a result, we can use the block in any other environment, because it doesn't specify any padding. This is why we can call it independent.
 
+## Demo
 ## ** Demo **
 ### HTML and BEM representation
 
