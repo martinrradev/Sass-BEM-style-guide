@@ -14,13 +14,13 @@
 
 ## Introduction
 
-#### ***Sass***
+#### *** SASS ***
 Sass enables us to write CSS in small, easy-to-navigate modules, meaning we can start with base styles and bolt on any components we might need for the system we’re currently building.
 
-#### ***BEM***
+#### *** BEM ***
 The BEM methodology gives us this clarity. BEM stands for Block-Element-Modifier and is designed to help modularise front-end development by breaking everything into blocks containing elements, then using modifiers to tweak them.
 
-#### ***BEM syntax:***
+#### *** BEM syntax: ***
 ```
 Syntax:
 .BLOCK { __ELEMENT [ _MODIFIER-NAME_MODIFIER-VALUE ]}
@@ -28,13 +28,13 @@ Example:
 .BLOCK__ITEM_SIZE_M
 ```
  
-## **Block**
+## ** Block **
 A functionally independent page component that can be reused. In HTML, blocks are represented by the class attribute.
 
 Features:
 - The block name describes its purpose ("What is it?" — menu or button), not its state ("What does it look like?" — red or big).
    
-##### ***Example:***
+##### *** Example: ***
 ``` html
 <!-- Correct. The `error` block is semantically meaningful -->
 <div class="error"></div>
@@ -151,7 +151,7 @@ A block can have a nested structure of elements in the DOM tree:
 ```
 However, this block structure is always represented as a flat list of elements in the BEM methodology:
 
-##### ***Example:***
+##### *** Example: ***
 ``` сss
 .block {
    &__elem1 {
@@ -318,7 +318,7 @@ Types of modifiers:
 From the BEM perspective, a modifier can't be used in isolation from the modified block or element. A modifier should change the appearance, behavior, or state of the entity, not replace it.
 
 ##### *** Example: ***
-```html
+``` html
 <!--
     Correct. The 'search-form' block has the 'theme' modifier with
     the value 'islands'
@@ -344,7 +344,7 @@ Why write the block name in the names of modifiers and elements?
 	_highlighted
 	_checked
 	_fixed
-	_size-big
+	_size_big
 
 ## ** Mix **
 A technique for using different BEM entities on a single DOM node.
@@ -366,6 +366,7 @@ Mixes allow you to:
     <div class="search-form header__search-form"></div>
 </div>
 ```
+
 In this example, we combined the behavior and styles of the search-form block and the search-form element from the header block. This approach allows us to set the external geometry and positioning in the header__search-form element, while the search-form block itself remains universal. As a result, we can use the block in any other environment, because it doesn't specify any padding. This is why we can call it independent.
 
 ## ** Demo **
@@ -373,7 +374,7 @@ In this example, we combined the behavior and styles of the search-form block an
 
 ### Demo 1
 ##### ***Example:***
-```html
+``` html
 <!-- 'HTML' -->
 <nav role="navigation" aria-label="primary">
   <ul class="nav__list">
@@ -418,7 +419,7 @@ In this example, we combined the behavior and styles of the search-form block an
 
 ### Demo 2
 ##### ***Example:***
-```html
+``` html
 <!-- 'HTML' -->
 <div class="pending-delivery-header">
   <div class="pending-delivery-header__content">
@@ -448,14 +449,14 @@ In this example, we combined the behavior and styles of the search-form block an
   @include flex(11);
   padding: rem(8) rem(12);
   line-height: rem(24);
-  background-color: $main-blue;
+  background-color: blue;
 
   &__content {
     @include display(flex);
     @include align-items(center);
     @include flex(1);
     position: relative;
-    color: $color-grey-dark;
+    color: grey;
   }
 
   &__title {
@@ -481,7 +482,7 @@ In this example, we combined the behavior and styles of the search-form block an
   &__count,
   &__cost,
   &__title {
-    color: $color-white;
+    color: white;
     font-weight: bold;
   }
 
