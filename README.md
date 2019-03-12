@@ -236,7 +236,8 @@ An element is an optional block component. Not all blocks have elements.
 	header__title
 	nav__item
 
-## Should I create a block or an element?
+## Question
+### ** Should I create a block or an element? **
 
  1. If a section of code might be reused and it doesn't depend on other
     page components being implemented, you should create a block.
